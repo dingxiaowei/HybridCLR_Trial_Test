@@ -3636,7 +3636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoadDll_StartGame_m2B49BCD60070E828861CE
 		// LoadMetadataForAOTAssemblies();
 		IL2CPP_RUNTIME_CLASS_INIT(LoadDll_tF4302664700CA4FCBC0471B8C95631AE6442BC68_il2cpp_TypeInfo_var);
 		LoadDll_LoadMetadataForAOTAssemblies_m4BBF393ED3D247B41E14271B6F1A1CD2723CE82F(/*hidden argument*/NULL);
-		// System.Reflection.Assembly.Load(GetAssetData("Assembly-CSharp.dll"));
+		// System.Reflection.Assembly.Load(GetAssetData("Assembly-CSharp.dll")); //�ȼ��ش��룬Ȼ�����prefab
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_0;
 		L_0 = LoadDll_GetAssetData_m9C1894A1182A0D19AF160CE055A658B9EC05AAE7(_stringLiteral9ABEE47BD07F22F5FFBC7CD96585062B77A26BCB, /*hidden argument*/NULL);
 		Assembly_t * L_1;

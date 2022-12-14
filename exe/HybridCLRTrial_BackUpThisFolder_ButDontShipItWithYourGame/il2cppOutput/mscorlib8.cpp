@@ -15246,6 +15246,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_mD94F3FE43A65684EFF98
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * __this, String_t* ___message0, String_t* ___paramName1, const RuntimeMethod* method);
 // System.Int32 System.Runtime.InteropServices.Marshal::ReleaseInternal(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_ReleaseInternal_m1F25DDB50BACEB9B7E746677BC477CA2B2734EF7 (intptr_t ___pUnk0, const RuntimeMethod* method);
+// System.Type System.Object::GetType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t * Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B (RuntimeObject * __this, const RuntimeMethod* method);
+// System.Int32 System.Runtime.InteropServices.Marshal::SizeOf(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_SizeOf_m5482D50095CD4ECFFE66778DDAB9173AD834E85A (Type_t * ___t0, const RuntimeMethod* method);
 // System.Boolean System.Environment::get_IsRunningOnWindows()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Environment_get_IsRunningOnWindows_mE76AAF860536728E20DCFE0CC34D13EB241366AD (const RuntimeMethod* method);
 // System.Object System.Object::MemberwiseClone()
@@ -15713,8 +15717,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MonoCMethod_get_core_clr_security_lev
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeConstructorInfo__ctor_m61A9877BCCF62E0FFBCF2D73057F4EF6DD5857DD (RuntimeConstructorInfo_t9B65F4BAA154E6B8888A68FA9BA02993090876BB * __this, const RuntimeMethod* method);
 // System.Boolean System.Reflection.Assembly::op_Equality(System.Reflection.Assembly,System.Reflection.Assembly)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Assembly_op_Equality_m08747340D9BAEC2056662DE73526DF33358F9FF9 (Assembly_t * ___left0, Assembly_t * ___right1, const RuntimeMethod* method);
-// System.Type System.Object::GetType()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t * Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B (RuntimeObject * __this, const RuntimeMethod* method);
 // System.Boolean System.Reflection.Assembly::op_Inequality(System.Reflection.Assembly,System.Reflection.Assembly)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Assembly_op_Inequality_m4A6211D91544031D7C1011BE6324E842910ADFE5 (Assembly_t * ___left0, Assembly_t * ___right1, const RuntimeMethod* method);
 // System.Object[] System.Reflection.MonoMethod::GetPseudoCustomAttributes()
@@ -17754,6 +17756,33 @@ IL_001d:
 		L_4 = Marshal_ReleaseInternal_m1F25DDB50BACEB9B7E746677BC477CA2B2734EF7((intptr_t)L_3, /*hidden argument*/NULL);
 		return L_4;
 	}
+}
+// System.Int32 System.Runtime.InteropServices.Marshal::SizeOf(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_SizeOf_m011C8EAAC8FAA4649F5ED57F9130542452B8BB30 (RuntimeObject * ___structure0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tEBAFAE20369FCB1B38C49C4E27A8D8C2C4B55058_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject * L_0 = ___structure0;
+		NullCheck(L_0);
+		Type_t * L_1;
+		L_1 = Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Marshal_tEBAFAE20369FCB1B38C49C4E27A8D8C2C4B55058_il2cpp_TypeInfo_var);
+		int32_t L_2;
+		L_2 = Marshal_SizeOf_m5482D50095CD4ECFFE66778DDAB9173AD834E85A(L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+}
+// System.Int32 System.Runtime.InteropServices.Marshal::SizeOf(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_SizeOf_m5482D50095CD4ECFFE66778DDAB9173AD834E85A (Type_t * ___t0, const RuntimeMethod* method)
+{
+	typedef int32_t (*Marshal_SizeOf_m5482D50095CD4ECFFE66778DDAB9173AD834E85A_ftn) (Type_t *);
+	using namespace il2cpp::icalls;
+	return ((Marshal_SizeOf_m5482D50095CD4ECFFE66778DDAB9173AD834E85A_ftn)mscorlib::System::Runtime::InteropServices::Marshal::SizeOf) (___t0);
 }
 // System.Void System.Runtime.InteropServices.Marshal::StructureToPtr(System.Object,System.IntPtr,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Marshal_StructureToPtr_m25366DC7AB7C32DBCD2E0113585848466F207954 (RuntimeObject * ___structure0, intptr_t ___ptr1, bool ___fDeleteOld2, const RuntimeMethod* method)

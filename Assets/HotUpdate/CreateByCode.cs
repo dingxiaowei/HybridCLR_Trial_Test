@@ -22,5 +22,7 @@ public class CreateByCode : MonoBehaviour
         p.Debug<int>(1);
 
         gameObject.AddComponent<LitJsonExample>();
+
+        var obj = GameObject.Instantiate(Resources.Load<GameObject>("Cube"));
     }
 }
